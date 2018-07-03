@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+<title>Wassersport</title>
+<style type="text/css">
+  /* Allgemein */
+  body       { font-size: small; }
+  .hl-pos { background-color: #D0FFD0; }
+  .hl-neu { background-color: #FFFFD0; }
+  .hl-neg { background-color: #FFE0E0; }
+  .hl-unk { background-color: #E0E0FF; }
+  .hl-wht { background-color: #FFFFFF; }
+  /* Kursliste */
+  table.list             { border: 1px solid black; border-collapse: collapse; }
+  table.list th          { border: 1px solid black; padding: 2px;  }
+  table.list td          { border: 1px solid black; padding: 2px;  }
+  table.list td.heading  { text-align: center; font-weight: bold;  }
+  table.list th.voraussetzungen { display: none; }
+  table.list td.voraussetzungen { display: none; }
+  /* Steckbriefe */
+  table.facts            { border: 1px solid black; border-collapse: collapse; }
+  table.facts th         { border: 1px solid black; padding: 2px;  }
+  table.facts td         { border: 1px solid black; padding: 2px;  }
+  table.facts td.heading { text-align: center; font-weight: bold;  }
+  table.facts th.voraussetzungen { display: none; }
+  table.facts td.voraussetzungen { display: none; }
+  /* Auswahl März 2018 */
+  table.mrz18    { border: 1px solid black; border-collapse: collapse; }
+  table.mrz18 th { border-bottom: 1px solid black; border-top: 1px solid black; padding: 4px; font-weight: normal; font-style: italic; }
+  table.mrz18 td { border: none; padding: 4px; }
+  td.mrz18-head  { text-align: center; font-style: italic; }
+  #tab-vlzeit tbody tr:nth-child(1)  td { border-top:    1px solid black; }
+  #tab-vlzeit tbody tr:nth-child(1)  td { border-bottom: 1px solid black; }
+  #tab-vlzeit tbody tr:nth-child(2)  td { border-top:    1px solid black; }
+  #tab-vlzeit tbody tr:nth-child(4)  td { border-bottom: 1px solid black; }
+  #tab-vlzeit tbody tr:nth-child(5)  td { border-top:    1px solid black; }
+  #tab-vlzeit tbody tr:nth-child(7)  td { border-bottom: 1px solid black; }
+  #tab-vlzeit tbody tr:nth-child(8)  td { border-top:    1px solid black; }
+  #tab-vlzeit tbody tr:nth-child(10) td { border-bottom: 1px solid black; }
+  #tab-ferien tbody tr:nth-child(1)  td { border-top:    1px solid black; }
+  #tab-ferien tbody tr:nth-child(1)  td { border-bottom: 1px solid black; }
+  #tab-ferien tbody tr:nth-child(2)  td { border-top:    1px solid black; }
+  #tab-ferien tbody tr:nth-child(3)  td { border-bottom: 1px solid black; }
+  #tab-alt    tbody tr td { border-top: 1px solid black; border-bottom: 1px solid black; }
+  /* Klappen */
+  div.fold                                    { display: block; }
+  div.fold-content                            { display: none;  }
+  input.fold-input:checked ~ div.fold-content { display: block; }
+</style>
+</head>
+<body>
+
+<table class="list">
+<thead>
+<tr>
+  <th>Uni</th>
+  <th>Kategorie</th>
+  <th colspan="2">Kurs</th>
+  <th>Link</th>
+  <th>Zeit</th>
+  <th>Ort</th>
+  <th>Preis</th>
+  <th class="voraussetzungen">Zielgruppe/<br/>Voraussetzungen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td colspan="9" class="heading">Allgemeine Infos Wassersport</td>
+</tr>
+<tr>
+  <td rowspan="1">TU</td>
+  <td rowspan="1">Info</td>
+  <td colspan="2">Wassersport</td>
+  <td><a href="https://www.tu-sport.de/index.php?id=39">Link</a></td>
+</tr>
+<tr>
+  <td rowspan="9">FU</td>
+  <td rowspan="9">Info</td>
+  <td colspan="2">Wassersport</td>
+  <td><a href="http://www.hochschulsport.fu-berlin.de/wassersportzentrum/index.html">Link</a></td>
+</tr>
+<tr>
+  <td colspan="2">Wassersport - Segeln</td>
+  <td><a href="http://www.hochschulsport.fu-berlin.de/wassersportzentrum/segeln/index.html">Link</a></td>
+</tr>
+<tr>
+  <td colspan="2">Wassersport - Paddeln</td>
+  <td><a href="http://www.hochschulsport.fu-berlin.de/wassersportzentrum/kanusport/index.html">Link</a></td>
+</tr>
+<tr>
+  <td colspan="2">Wassersport - Windsurfen</td>
+  <td><a href="http://www.hochschulsport.fu-berlin.de/wassersportzentrum/windsurfen/index.html">Link</a></td>
+</tr>
+<tr>
+  <td colspan="2">Wassersport - Rudern</td>
+  <td><a href="http://www.hochschulsport.fu-berlin.de/wassersportzentrum/rudern/index.html">Link</a></td>
+</tr>
+<tr>
+  <td colspan="2">Wassersport - Stand-Up-Paddling</td>
+  <td><a href="http://www.hochschulsport.fu-berlin.de/wassersportzentrum/sup/index.html">Link</a></td>
+</tr>
+<tr>
+  <td colspan="2">Wassersport - Motorboot</td>
+  <td><a href="http://www.hochschulsport.fu-berlin.de/wassersportzentrum/motorboot/index.html">Link</a></td>
+</tr>
+<tr>
+  <td colspan="2">Wassersport - Sportbootführerschein</td>
+  <td><a href="http://www.hochschulsport.fu-berlin.de/wassersportzentrum/Sportbootfuehrerschein/index.html">Link</a></td>
+</tr>
+<tr>
+  <td colspan="2">Wassersport - FAQ</td>
+  <td><a href="http://www.hochschulsport.fu-berlin.de/wassersportzentrum/faq_wsz/index.html">Link</a></td>
+</tr>
+<tr>
+  <td rowspan="2">HU</td>
+  <td rowspan="2">Info</td>
+  <td colspan="2">Wassersport</td>
+  <td><a href="https://www.hochschulsport.hu-berlin.de/de/angebot/wassersportzentrum-schmoeckwitz">Link</a></td>
+</tr>
+<tr>
+  <td colspan="2">Wassersport - Grafik</td>
+  <td><a href="https://www.hochschulsport.hu-berlin.de/de/angebot/wassersportzentrum-schmoeckwitz/grafik-wsz-neu-fuerwebsite.png/image_large">Link</a></td>
+</tr>
+<tr>
+  <td colspan="9" class="heading">TU Wassersport (mit Gerät, einschl. Sportreisen)</td>
+</tr>
+<tr>
+  <td rowspan="11">TU</td>
+  <td rowspan="11">Segeln</td>
+  <td colspan="2">Einweisung</td>
+  <td><a href="https://www.tu-sport.de/index.php?id=2860&tx_dwzeh_courses%5BsportsDescription%5D=1016&tx_dwzeh_courses%5Baction%5D=show&cHash=8e80ab8a8494f92b649a82b71ad42e74">Link</a></td>
+  <td>1*2h</td>
+  <td>Stößensee</td>
+  <td>14&euro;</td>
+  <td class="voraussetzungen">SBF Binnen</td>
+</tr>
+<tr>
+  <td colspan="2">Theorie</td>
+  <td><a href="https://www.tu-sport.de/index.php?id=2860&tx_dwzeh_courses%5BsportsDescription%5D=63&tx_dwzeh_courses%5Baction%5D=show&cHash=2bba7f6b87835c99274961df82bc4f6d">Link</a></td>
+  <td>12h</td>
+  <td>TU</td>
+  <td>25&euro;</td>
+  <td class="voraussetzungen">-</td>
+</tr>
+<tr>
+  <td colspan="2">A1-Praxiskurs</td>
+  <td><a href="https://www.tu-sport.de/index.php?id=2860&tx_dwzeh_courses%5BsportsDescription%5D=132&tx_dwzeh_courses%5Baction%5D=show&cHash=72fb691bd9cc921e860322ab509c0a21">Link</a></td>
+  <td>10*5h</td>
+  <td>Stößensee</td>
+  <td>142&euro;</td>
+  <td class="voraussetzungen">-</td>
+</tr>
+<tr>
+  <td colspan="2">A1-Übungstermine</td>
+  <td><a href="https://www.tu-sport.de/index.php?id=2860&tx_dwzeh_courses%5BsportsDescription%5D=512&tx_dwzeh_courses%5Baction%5D=show&cHash=8e79ae2ae547d079975e565cc50b85b0">Link</a></td>
+  <td>1*5h</td>
+  <td>Stößensee</td>
+  <td>16&euro;</td>
+  <td class="voraussetzungen">A1-Praxiskurs</td>
+</tr>
+<tr>
+  <td colspan="2">A1-Segelcamp</td>
+  <td><a href="https://www.tu-sport.de/index.php?id=2860&tx_dwzeh_courses%5BsportsDescription%5D=1090&tx_dwzeh_courses%5Baction%5D=show&cHash=7997f5e45dd66b4ab039f58242e271d8">Link</a></td>
+  <td>5*5h</td>
+  <td>Stößensee</td>
+  <td>70&euro;</td>
+  <td class="voraussetzungen">SBF Binnen</td>
+</tr>
+<tr>
+  <td colspan="2">A2-Auffrischungskurse</td>
+  <td><a href="https://www.tu-sport.de/index.php?id=2860&tx_dwzeh_courses%5BsportsDescription%5D=133&tx_dwzeh_courses%5Baction%5D=show&cHash=e23c09586c179b2ed68826abbce390cb">Link</a></td>
+  <td>3*5h</td>
+  <td>Stößensee</td>
+  <td>50&euro;</td>
+  <td class="voraussetzungen">SBF Binnen</td>
+</tr>
+<tr>
+  <td colspan="2">F-Kurs</td>
+  <td><a href="https://www.tu-sport.de/index.php?id=2860&tx_dwzeh_courses%5BsportsDescription%5D=488&tx_dwzeh_courses%5Baction%5D=show&cHash=11e7100dbaa2995279a8afa808da1ab1">Link</a></td>
+  <td>8*5h</td>
+  <td>Stößensee</td>
+  <td>187&euro;</td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td colspan="2">Regattakurs</td>
+  <td><a href="https://www.tu-sport.de/index.php?id=2860&tx_dwzeh_courses%5BsportsDescription%5D=1038&tx_dwzeh_courses%5Baction%5D=show&cHash=c42e855cb983850ef61e29b7b5115f7c">Link</a></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td colspan="2">Katsegeln für Segler</td>
+  <td><a href="https://www.tu-sport.de/index.php?id=2860&tx_dwzeh_courses%5BsportsDescription%5D=937&tx_dwzeh_courses%5Baction%5D=show&cHash=a1cce7ef56ffc6c2db1a4a3cc69beb33">Link</a></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td colspan="2">Segeltreff</td>
+  <td><a href="https://www.tu-sport.de/index.php?id=2860&tx_dwzeh_courses%5BsportsDescription%5D=1089&tx_dwzeh_courses%5Baction%5D=show&cHash=5e068e3f945e8e1e29dbebe95d0ab355">Link</a></td>
+  <td>11*5h</td>
+  <td>Stößensee</td>
+  <td>19&euro; p.T.</td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td colspan="2">Berliner Hochschulcup Segeln</td>
+  <td><a href="https://www.tu-sport.de/index.php?id=3121">Link</a></td>
+  <td>2*9h</td>
+  <td>Wannsee</td>
+  <td>25&euro;</td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td rowspan="9">TU</td>
+  <td rowspan="9">Törn</td>
+  <td colspan="2">[2018] Ostseeflotillentörn der HU Berlin</td>
+  <td><a href="https://www.tu-sport.de/index.php?id=3123">Link</a></td>
+  <td>9d</td>
+  <td>Ostsee</td>
+  <td>450&euro;+A</td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td colspan="2">[2018] adh-Törn - Yachtsegeln Ostsee</td>
+  <td><a href="https://www.tu-sport.de/index.php?id=3012">Link</a></td>
+  <td>8d</td>
+  <td>Ostsee</td>
+  <td>420&euro;+A</td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td colspan="2">[2018] Unter Segeln nach Kopenhagen</td>
+  <td><a href="https://www.tu-sport.de/index.php?id=2860&tx_dwzeh_courses%5BsportsDescription%5D=1112&tx_dwzeh_courses%5Baction%5D=show&cHash=ab47e6ba4d4caf2e4e9006b07f85cb44">Link</a></td>
+  <td>8d</td>
+  <td>Ostsee</td>
+  <td>555&euro;+A</td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td colspan="2">[2018] Segeln und Klettern in Griechenland</td>
+  <td><a href="https://www.tu-sport.de/index.php?id=2860&tx_dwzeh_courses%5BsportsDescription%5D=1113&tx_dwzeh_courses%5Baction%5D=show&cHash=b25a2c55582d4c6bb2c67546aa1abca8">Link</a></td>
+  <td>8d</td>
+  <td>Mittelmeer</td>
+  <td>450&euro;+A</td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td colspan="2">[2018] Katamaransegeln und Klettern in Kroatien</td>
+  <td><a href="https://www.tu-sport.de/index.php?id=2860&tx_dwzeh_courses%5BsportsDescription%5D=1050&tx_dwzeh_courses%5Baction%5D=show&cHash=7cebacb9123efb86a8274513b8be568e">Link</a></td>
+  <td></td>
+  <td>Mittelmeer</td>
+  <td></td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td colspan="2">[2017] Katamaransegeln und Klettern in Kroatien</td>
+  <td><a href="https://www.tu-sport.de/index.php?id=2860&tx_dwzeh_courses%5BsportsDescription%5D=1050&tx_dwzeh_courses%5Baction%5D=show&cHash=7cebacb9123efb86a8274513b8be568e">Link</a></td>
+  <td></td>
+  <td>Mittelmeer</td>
+  <td></td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td colspan="2">[2017] Ostseeflotillentörn der HU Berlin</td>
+  <td><a href="https://www.tu-sport.de/index.php?id=3123">Link</a></td>
+  <td></td>
+  <td>Ostsee</td>
+  <td></td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td colspan="2">[2017] adh-Törn - Yachtsegeln Ostsee</td>
+  <td><a href="https://www.tu-sport.de/index.php?id=3012">Link</a></td>
+  <td></td>
+  <td>Ostsee</td>
+  <td></td>
+</tr>
+<tr>
+  <td colspan="2">[2017] Yachtsegeln Dänische Südsee</td>
+  <td><a href="https://www.tu-sport.de/index.php?id=2860&tx_dwzeh_courses%5BsportsDescription%5D=1051&tx_dwzeh_courses%5Baction%5D=show&cHash=a30a67ea2801ae9949fbb0eed17ba0e7">Link</a></td>
+  <td></td>
+  <td>Ostsee</td>
+  <td></td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td rowspan="14">TU</td>
+  <td rowspan="14">Paddeln</td>
+  <td colspan="2">Einweisung</td>
+  <td><a href="https://www.tu-sport.de/index.php?id=2860&tx_dwzeh_courses%5BsportsDescription%5D=116&tx_dwzeh_courses%5Baction%5D=show&cHash=a74eb751ebed3f0d5a993762a574e185">Link</a></td>
+  <td>1*3h</td>
+  <td>Stößensee</td>
+  <td>8&euro;</td>
+  <td class="voraussetzungen">-</td>
+</tr>
+<tr>
+  <td colspan="2">A1 Kajak-Grundkurs</td>
+  <td><a href="https://www.tu-sport.de/index.php?id=2860&tx_dwzeh_courses%5BsportsDescription%5D=118&tx_dwzeh_courses%5Baction%5D=show&cHash=6e4f3b8eebc1d01ac3c5d53ddb5f57f6">Link</a></td>
+  <td>5*3h</td>
+  <td>Stößensee</td>
+  <td>39&euro;</td>
+  <td class="voraussetzungen">-</td>
+</tr>
+<tr>
+  <td colspan="2">A2 Kajak-Grundkurs</td>
+  <td><a href="https://www.tu-sport.de/index.php?id=2860&tx_dwzeh_courses%5BsportsDescription%5D=1059&tx_dwzeh_courses%5Baction%5D=show&cHash=b983c43d123867671a17cb6bdf206c3a">Link</a></td>
+  <td></td>
+  <td>Stößensee</td>
+  <td></td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td rowspan="2">Eskimotiertraining</td>
+  <td>A1-Kurs</td>
+  <td rowspan="2"><a href="https://www.tu-sport.de/index.php?id=2860&tx_dwzeh_courses%5BsportsDescription%5D=271&tx_dwzeh_courses%5Baction%5D=show&cHash=5a73e95bfa91c9c4a199df1e0616f86b">Link</a></td>
+  <td>4*3h</td>
+  <td>Stößensee</td>
+  <td>64&euro;</td>
+  <td class="voraussetzungen">Grundkentnisse</td>
+</tr>
+<tr>
+  <td>A2-Kurs</td>
+  <td>2*3h</td>
+  <td>Stößensee</td>
+  <td>32&euro;</td>
+  <td class="voraussetzungen">Vorkenntisse im Eskimotieren, für Slowenienreise</td>
+</tr>
+<tr>
+  <td colspan="2">Paddeltreff</td>
+  <td><a href="https://www.tu-sport.de/index.php?id=2860&tx_dwzeh_courses%5BsportsDescription%5D=1026&tx_dwzeh_courses%5Baction%5D=show&cHash=a9bce4c2fc3262730b82ce633fd9927c">Link</a></td>
+  <td>10*2h</td>
+  <td>Stößensee</td>
+  <td>25&euro;</td>
+  <td class="voraussetzungen">Paddelkarte</td>
+</tr>
+<tr>
+  <td colspan="2">Paddeln Sonnenuntergang</td>
+  <td><a href="https://www.tu-sport.de/index.php?id=2860&tx_dwzeh_courses%5BsportsDescription%5D=1114&tx_dwzeh_courses%5Baction%5D=show&cHash=46b7c329cbbb91a054d24640a89b3f61">Link</a></td>
+  <td>1*4h</td>
+  <td>Stößensee</td>
+  <td>12&euro;</td>
+  <td class="voraussetzungen">Paddelkarte</td>
+</tr>
+<tr>
+  <td colspan="2">WW Einführung Spandau</td>
+  <td><a href="https://www.tu-sport.de/index.php?id=2860&tx_dwzeh_courses%5BsportsDescription%5D=16&tx_dwzeh_courses%5Baction%5D=show&cHash=9403f24f5143502f318e5c41c5ecf714">Link</a></td>
+  <td>1*6h</td>
+  <td>Berlin</td>
+  <td>25&euro;</td>
+  <td class="voraussetzungen">Grundkentnisse</td>
+</tr>
+<tr>
+  <td colspan="2">WW Kompaktkurs Sömmerda</td>
+  <td><a href="https://www.tu-sport.de/index.php?id=2860&tx_dwzeh_courses%5BsportsDescription%5D=270&tx_dwzeh_courses%5Baction%5D=show&cHash=085d58eb8be9f28c4d49560143315ea8">Link</a></td>
+  <td>3d</td>
+  <td>Thüringen</td>
+  <td>129&euro;+A</td>
+  <td class="voraussetzungen">A1 Grundkurs</td>
+</tr>
+<tr>
+  <td colspan="2">WW Slowenien A3</td>
+  <td><a href="https://www.tu-sport.de/index.php?id=2860&tx_dwzeh_courses%5BsportsDescription%5D=777&tx_dwzeh_courses%5Baction%5D=show&cHash=8c1eec683b2c71affa71af0d1d7f6002">Link</a></td>
+  <td>13d</td>
+  <td>Alpen</td>
+  <td>582&euro;</td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td colspan="2">WW Slowenien F1</td>
+  <td><a href="https://www.tu-sport.de/index.php?id=2860&tx_dwzeh_courses%5BsportsDescription%5D=952&tx_dwzeh_courses%5Baction%5D=show&cHash=2beec72dd6f1ff7837922260e2b4a8ba">Link</a></td>
+  <td>12d</td>
+  <td>Alpen</td>
+  <td>571&euro;</td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td colspan="2">Wanderpaddeln Drawa</td>
+  <td><a href="https://www.tu-sport.de/index.php?id=2860&tx_dwzeh_courses%5BsportsDescription%5D=954&tx_dwzeh_courses%5Baction%5D=show&cHash=391f92b87b1308db976de73a31742b7b">Link</a></td>
+  <td>4d</td>
+  <td>Polen</td>
+  <td>170&euro;+A</td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td colspan="2">Wanderpaddeln Pliszka</td>
+  <td><a href="https://www.tu-sport.de/index.php?id=2860&tx_dwzeh_courses%5BsportsDescription%5D=953&tx_dwzeh_courses%5Baction%5D=show&cHash=0c7096a7324b003df800bb29ec223792">Link</a></td>
+  <td>1d</td>
+  <td>Polen</td>
+  <td>52&euro;+A</td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td colspan="2">Wanderpaddeln Rhin</td>
+  <td><a href="https://www.tu-sport.de/index.php?id=2860&tx_dwzeh_courses%5BsportsDescription%5D=555&tx_dwzeh_courses%5Baction%5D=show&cHash=589713f3086bf7b26f34429737d57d80">Link</a></td>
+  <td>1d</td>
+  <td>Brandenburg</td>
+  <td>52&euro;+A</td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td rowspan="5">TU</td>
+  <td rowspan="5">Windsurfen</td>
+  <td colspan="2">Grundkurs</td>
+  <td><a href="https://www.tu-sport.de/index.php?id=2860&tx_dwzeh_courses%5BsportsDescription%5D=272&tx_dwzeh_courses%5Baction%5D=show&cHash=07a94f4a43536e8712b625c3adbcfc67">Link</a></td>
+  <td>3*5h</td>
+  <td>Wannsee</td>
+  <td>85&euro;+12&euro;</td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td colspan="2">Auffrischung</td>
+  <td><a href="https://www.tu-sport.de/index.php?id=2860&tx_dwzeh_courses%5BsportsDescription%5D=274&tx_dwzeh_courses%5Baction%5D=show&cHash=39377814d1797fa3e945a768362157dc">Link</a></td>
+  <td>1*5h</td>
+  <td>Wannsee</td>
+  <td>25&euro;</td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td colspan="2">Theorie</td>
+  <td><a href="https://www.tu-sport.de/index.php?id=2860&tx_dwzeh_courses%5BsportsDescription%5D=138&tx_dwzeh_courses%5Baction%5D=show&cHash=055c55b35e95e09cd136cefcd4c5be1d">Link</a></td>
+  <td>1*3h</td>
+  <td>TU</td>
+  <td>0&euro;</td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td colspan="2">Kegnaes / Als (DK)</td>
+  <td><a href="https://www.tu-sport.de/index.php?id=2860&tx_dwzeh_courses%5BsportsDescription%5D=317&tx_dwzeh_courses%5Baction%5D=show&cHash=d62a45487b482072bcee692581fc6f65">Link</a></td>
+  <td>8d</td>
+  <td>Ostsee</td>
+  <td>240&euro;+A</td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td colspan="2">Ringköbing Fjord (DK)</td>
+  <td><a href="https://www.tu-sport.de/index.php?id=2860&tx_dwzeh_courses%5BsportsDescription%5D=181&tx_dwzeh_courses%5Baction%5D=show&cHash=811cc7552ab859580fadd45bdfc3f1d6">Link</a></td>
+  <td>8d</td>
+  <td>Nordsee</td>
+  <td>330&euro;+A</td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td rowspan="1">TU</td>
+  <td rowspan="1">Rudern</td>
+  <td colspan="2"></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td rowspan="8">TU</td>
+  <td rowspan="8">Wassersport</td>
+  <td colspan="2">Kitesurfen - Wochenendkurse</td>
+  <td><a href="https://www.tu-sport.de/index.php?id=2860&tx_dwzeh_courses%5BsportsDescription%5D=112&tx_dwzeh_courses%5Baction%5D=show&cHash=00eb9cc7c48aa4adeeb345bfb9f83b92">Link</a>, <a href="https://www.tu-sport.de/index.php?id=3138">Link</a></td>
+  <td>2d</td>
+  <td>Rügen</td>
+  <td>189&euro;+AU</td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td colspan="2">Kitesurfen - 5-Tages Kurse</td>
+  <td><a href="https://www.tu-sport.de/index.php?id=2860&tx_dwzeh_courses%5BsportsDescription%5D=113&tx_dwzeh_courses%5Baction%5D=show&cHash=46c8ac226b6a6d75f5a8312a5a4a9f02">Link</a>, <a href="https://www.tu-sport.de/index.php?id=3136">Link</a></td>
+  <td>5d</td>
+  <td>Rügen</td>
+  <td>289&euro;+AU</td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td rowspan="2">Kiten/Surfen -<br/>Pfingstcamp</td>
+  <td>Kitesurfen</td>
+  <td rowspan="2"><a href="https://www.tu-sport.de/index.php?id=2860&tx_dwzeh_courses%5BsportsDescription%5D=311&tx_dwzeh_courses%5Baction%5D=show&cHash=c7425c95a579838dad30c0ae523b41ee">Link</a>, <a href="https://www.tu-sport.de/index.php?id=3137">Link</a></td>
+  <td>3d</td>
+  <td>Rügen</td>
+  <td>229&euro;+AU</td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td>Windsurfen</td>
+  <td>3d</td>
+  <td>Rügen</td>
+  <td>115&euro;+AU</td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td colspan="2">Wassersportwoche auf Rügen</td>
+  <td><a href="https://www.tu-sport.de/index.php?id=2860&tx_dwzeh_courses%5BsportsDescription%5D=853&tx_dwzeh_courses%5Baction%5D=show&cHash=5ca1c8ad0705a6ea66abc6b25a611645">Link</a></td>
+  <td></td>
+  <td>Ostsee</td>
+  <td></td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td colspan="2">Wellenreiten Frankreich</td>
+  <td><a href="https://www.tu-sport.de/index.php?id=2860&tx_dwzeh_courses%5BsportsDescription%5D=828&tx_dwzeh_courses%5Baction%5D=show&cHash=04f343251beb30f91fca342d344079bc">Link</a></td>
+  <td>7d</td>
+  <td>Biscaya</td>
+  <td>384&euro;+A</td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td colspan="2">Wakeboarden/Wasserski</td>
+  <td><a href="https://www.tu-sport.de/index.php?id=2860&tx_dwzeh_courses%5BsportsDescription%5D=248&tx_dwzeh_courses%5Baction%5D=show&cHash=a0fa267a6a3aee2049ab85180394df64">Link</a></td>
+  <td>5*2h</td>
+  <td>Berlin</td>
+  <td>144&euro;</td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td colspan="2">Stand-Up-Paddling Einführungskurs</td>
+  <td><a href="https://www.tu-sport.de/index.php?id=2860&tx_dwzeh_courses%5BsportsDescription%5D=482&tx_dwzeh_courses%5Baction%5D=show&cHash=247f288516445d4382bb97dbdaef4998">Link</a></td>
+  <td>1*2h</td>
+  <td>Stößensee</td>
+  <td>17&euro;</td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td colspan="9" class="heading">FU Wassersport (mit Gerät, einschl. Sportreisen)</td>
+</tr>
+<tr>
+  <td rowspan="19">FU</td>
+  <td rowspan="19">Segeln</td>
+  <td rowspan="4">Einweisung</td>
+  <td>Jollen</td>
+  <td rowspan="4"><a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2018/_Segeln_-_Einweisungstermine.html">SS18</a>, <a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2018_Ferien/_Segeln_-_Einweisungstermine.html">SF18</a><br/>SS17:<br/><a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2017/_Segeln_-_Einweisungstermine_Jolle.html">J</a>, <a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2017/_Segeln_-_Einweisungstermine_Fortgeschrittenenjolle.html">FJ</a>, <a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2017/_Segeln_-_Einweisungstermine_Catamaran.html">Cat</a>, <a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2017/_Segeln_-_Einweisungstermine_Laser_Radial.html">E</a></td>
+  <td>4h</td>
+  <td>Wannsee</td>
+  <td>15&euro;</td>
+</tr>
+<tr>
+  <td>F-Jolle</td>
+  <td>4h</td>
+  <td>Wannsee</td>
+  <td>15&euro;</td>
+</tr>
+<tr>
+  <td>Katamaran</td>
+  <td>3h</td>
+  <td>Wannsee</td>
+  <td>25&euro;</td>
+</tr>
+<tr>
+  <td>Einhand</td>
+  <td>2h</td>
+  <td>Wannsee</td>
+  <td>15&euro;</td>
+</tr>
+<tr>
+  <td rowspan="3">Einsteiger</td>
+  <td>SBF Binnen Praxis</td>
+  <td rowspan="3"><a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2018/_Segeln_-_EinsteigerInnen.html">SS18</a>, <a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2018_Ferien/_Segeln_-_EinsteigerInnen.html">SF18</a><br/><a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2017/_Segeln_-_EinsteigerInnen.html">SS17</a>, <a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2017_Ferien/_Segeln_-_EinsteigerInnen.html">SF17</a></td>
+  <td>10*5h</td>
+  <td>Wannsee</td>
+  <td>155&euro;</td>
+</tr>
+<tr>
+  <td>SBF Vorbereitung</td>
+  <td>1*5h</td>
+  <td>Wannsee</td>
+  <td>15&euro;</td>
+</tr>
+<tr>
+  <td>SBF Binnen Theorie</td>
+  <td>18h</td>
+  <td>FU</td>
+  <td>20&euro;</td>
+</tr>
+<tr>
+  <td rowspan="5">Fortgeschrittene</td>
+  <td>Besser Segeln</td>
+  <td rowspan="5"><a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2018/_Segeln_-_Fortgeschrittene.html">SS18</a>, <a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2018_Ferien/_Segeln_-_Fortgeschrittene.html">SF18</a><br/><a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2017/_Segeln_-_Fortgeschrittene.html">SS17</a>, <a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2017_Ferien/_Segeln_-_Fortgeschrittene.html">SF17</a></td>
+  <td>3*5h<br/>4*5h</td>
+  <td>Wannsee</td>
+  <td>50&euro;</td>
+</tr>
+<tr>
+  <td>Auffrischungskurs</td>
+  <td>3*4h</td>
+  <td>Wannsee</td>
+  <td>40&euro;</td>
+</tr>
+<tr>
+  <td>Pirat<br/>Spinnakertraining I</td>
+  <td>6*6h<br/>7*5h</td>
+  <td>Wannsee</td>
+  <td>125&euro;</td>
+</tr>
+<tr>
+  <td>Laser Stratos<br/>Gennaker/Trapez</td>
+  <td>2*8h<br/>4*4h</td>
+  <td>Wannsee</td>
+  <td>70&euro;</td>
+</tr>
+<tr>
+  <td>Freitagsregatta</td>
+  <td>1*4h</td>
+  <td>Wannsee</td>
+  <td>9&euro;</td>
+</tr>
+<tr>
+  <td rowspan="3">Catamaran</td>
+  <td>Umsteiger</td>
+  <td rowspan="3"><a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2018/_Segeln_-_Catamaran.html">SS18</a>, <a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2018_Ferien/_Segeln_-_Catamaran.html">SF18</a><br/><a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2017/_Segeln_-_Catamaran.html">SS17</a>, <a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2017_Ferien/_Segeln_-_Catamaran.html">SF17</a></td>
+  <td>2*8h</td>
+  <td>Wannsee</td>
+  <td>125&euro;</td>
+</tr>
+<tr>
+  <td>Aufbaukurs</td>
+  <td>2*6h</td>
+  <td>Wannsee</td>
+  <td>90&euro;</td>
+</tr>
+<tr>
+  <td>Prüfung</td>
+  <td>1*1h</td>
+  <td>Wannsee</td>
+  <td>16&euro;</td>
+</tr>
+<tr>
+  <td rowspan="2">Catamaran Tour</td>
+  <td>Hiddensee</td>
+  <td rowspan="2"><a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2017/_Segeln_-_Catamaran_Tour.html">SS17</a>, <a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2017_Ferien/_Segeln_-_Catamaran_Tour.html">SF17</a></td>
+  <td>2d</td>
+  <td>Ostsee</td>
+  <td>176&euro;+A</td>
+</tr>
+<tr>
+  <td>Rügen</td>
+  <td>4d</td>
+  <td>Ostsee</td>
+  <td>360&euro;+A</td>
+</tr>
+<tr>
+  <td colspan="2">Ernst-Reuter-Gesellschaft (Kurs Uni-Jolle)</td>
+  <td><a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2018/_Segeln_-_Ernst-Reuter-Gesellschaft.html">SS18</a></td>
+  <td>4*5h</td>
+  <td>Wannsee</td>
+  <td>70&euro;</td>
+</tr>
+<tr>
+  <td colspan="2">12. Berliner Hochschulcup 2018</td>
+  <td><a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2018/_Segeln_-_12__Berliner_Hochschulcup_2018.html">SS18</a>, <a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2018_Ferien/_Segeln_-_12__Berliner_Hochschulcup_2018.html">SF18</a><br/><a href="https://www.buchsys.de/fu-berlin/angebote/Wintersemester_2017_2018_Ferien/_Segeln_-_12__Berliner_Hochschulcup_2018.html">WF17</a></td>
+  <td>2*9h</td>
+  <td>Wannsee</td>
+  <td>25&euro;</td>
+</tr>
+<tr>
+  <td rowspan="9">FU</td>
+  <td rowspan="9">SBF<br/>Theorie</td>
+  <td colspan="2">SBF Binnen Theorie</td>
+  <td><a href="https://www.buchsys.de/fu-berlin/angebote/Wintersemester_2017_2018/_Sportbootfuehrerschein_Binnen_-_Theorie.html">WS17</a>, <a href="https://www.buchsys.de/fu-berlin/angebote/Wintersemester_2017_2018_Ferien/_Sportbootfuehrerschein_Binnen_-_Theorie.html">WF17</a></td>
+  <td>18h</td>
+  <td>FU</td>
+  <td>35&euro;</td>
+</tr>
+<tr>
+  <td colspan="2">SBF See Theorie</td>
+  <td><a href="https://www.buchsys.de/fu-berlin/angebote/Wintersemester_2017_2018/_Sportbootfuehrerschein_See_-_Theorie.html">WS17</a>, <a href="https://www.buchsys.de/fu-berlin/angebote/Wintersemester_2017_2018_Ferien/_Sportbootfuehrerschein_See_-_Theorie.html">WF17</a></td>
+  <td>18h</td>
+  <td>FU</td>
+  <td>35&euro;</td>
+</tr>
+<tr>
+  <td colspan="2">Seewetter</td>
+  <td><a href="https://www.buchsys.de/fu-berlin/angebote/Wintersemester_2017_2018/_Segeln_-_Seewetter.html">WS17</a>, <a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2017/_Segeln_-_Seewetter.html">SS17</a></td>
+  <td>2*4h</td>
+  <td>FU</td>
+  <td>15&euro;</td>
+</tr>
+<tr>
+  <td colspan="2">SBF Prüfungsanmeldung</td>
+  <td><a href="https://www.buchsys.de/fu-berlin/angebote/aktueller_zeitraum/_Sportbootfuehrerschein_-_Pruefungsanmeldung.html">Link</a></td>
+  <td></td>
+  <td></td>
+  <td>0&euro;</td>
+</tr>
+<tr>
+  <td rowspan="2">Funkausbildung</td>
+  <td>SRC</td>
+  <td rowspan="2"><a href="https://www.buchsys.de/fu-berlin/angebote/Wintersemester_2017_2018/_Funkausbildung.html">WS17</a>, <a href="https://www.buchsys.de/fu-berlin/angebote/Wintersemester_2017_2018_Ferien/_Funkausbildung.html">WF17</a><br/><a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2018/_Funkausbildung.html">SS18</a>, <a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2018_Ferien/_Funkausbildung.html">SF18</a><br/><a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2017/_Funkausbildung.html">SS17</a>, <a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2017_Ferien/_Funkausbildung.html">SF17</a></td>
+  <td>2*3h</td>
+  <td>FU</td>
+  <td>?&euro;</td>
+</tr>
+<tr>
+  <td>SRC + UBI</td>
+  <td>3*3h</td>
+  <td>FU</td>
+  <td>?&euro;</td>
+</tr>
+<tr>
+  <td rowspan="3">SKS</td>
+  <td>Theorie</td>
+  <td><a href="https://www.buchsys.de/fu-berlin/angebote/Wintersemester_2017_2018/_Sportkuestenschifferschein__SKS_-_Theorie.html">WS17</a>, <a href="https://www.buchsys.de/fu-berlin/angebote/Wintersemester_2017_2018_Ferien/_Sportkuestenschifferschein__SKS_-_Theorie.html">WF17</a></td>
+  <td>6*3h</td>
+  <td>FU</td>
+  <td>35&euro;</td>
+</tr>
+<tr>
+  <td>Naviationstraining</td>
+  <td><a href="https://www.buchsys.de/fu-berlin/angebote/Wintersemester_2017_2018/_Sportkuestenschifferschein__SKS_-Naviationstraining.html">WS17</a>, <a href="https://www.buchsys.de/fu-berlin/angebote/Wintersemester_2017_2018_Ferien/_Sportkuestenschifferschein__SKS_-Naviationstraining.html">WF17</a></td>
+  <td>3*3.5h</td>
+  <td>FU</td>
+  <td>20&euro;</td>
+</tr>
+<tr>
+  <td>Naviationstraining</td>
+  <td><a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2017/_Sportkuestenschifferschein_-_Theorie.html">SS17</a>, <a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2017_Ferien/_Sportkuestenschifferschein_-_Theorie.html">SF17</a></td>
+  <td>6*2h</td>
+  <td>FU</td>
+  <td>32&euro;</td>
+</tr>
+<tr>
+  <td rowspan="3">FU</td>
+  <td rowspan="3">Törn</td>
+  <td colspan="2">[2018] Ostseeflotillentörn</td>
+  <td><a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2018/_Segeln-_Ostseeflotillentoern.html">SS18</a>, <a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2018_Ferien/_Segeln-_Ostseeflotillentoern.html">SF18</a></td>
+  <td>9d</td>
+  <td>Ostsee</td>
+  <td>450&euro;+A</td>
+</tr>
+<tr>
+  <td colspan="2">[2017] Ostseeflotillentörn</td>
+  <td><a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2017/_Segeln_-_Yachtsegeln_-_Ostseeflotillentoern.html">SS17</a>, <a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2017_Ferien/_Segeln_-_Yachtsegeln_-_Ostseeflotillentoern.html">SF17</a></td>
+  <td>9d</td>
+  <td>Ostsee</td>
+  <td>450&euro;+A</td>
+</tr>
+<tr>
+  <td colspan="2">[2017] adh Törn - Yachtsegeln Ostsee</td>
+  <td><a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2017/_Segeln_-_Yachtsegeln_auf_der_Ostsee_-_adh_Toerns.html">SS17</a>, <a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2017_Ferien/_Segeln_-_Yachtsegeln_auf_der_Ostsee_-_adh_Toerns.html">SF17</a></td>
+  <td>8d</td>
+  <td>Ostsee</td>
+  <td>420&euro;+A</td>
+</tr>
+<tr>
+  <td rowspan="13">FU</td>
+  <td rowspan="13">Paddeln</td>
+  <td colspan="2">Einweisung</td>
+  <td><a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2018/_Kanu_-_Einweisung.html">SS18</a><br/><a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2017/_Kanu_-_Einweisung.html">SS17</a>, <a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2017_Ferien/_Kanu_-_Einweisung.html">SF17</a></td>
+  <td>1*4h</td>
+  <td>Wannsee</td>
+  <td>15&euro;</td>
+</tr>
+<tr>
+  <td rowspan="3">Kurs</td>
+  <td>Einsteiger - Kurs</td>
+  <td rowspan="3"><a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2018/_Kanu_-_Kurs.html">SS18</a>, <a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2018_Ferien/_Kanu_-_Kurs.html">SF18</a><br/><a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2017/_Kanu_-_Kurs.html">SS17</a>, <a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2017_Ferien/_Kanu_-_Kurs.html">SF17</a></td>
+  <td>7*2h</td>
+  <td>Wannsee</td>
+  <td>38&euro;</td>
+</tr>
+<tr>
+  <td>Einsteiger - Kompakt</td>
+  <td>2*7h<br/>3*5h</td>
+  <td>Wannsee</td>
+  <td>38&euro;</td>
+</tr>
+<tr>
+  <td>Fortgeschrittene</td>
+  <td>2*6h</td>
+  <td>Wannsee</td>
+  <td>25&euro;</td>
+</tr>
+<tr>
+  <td colspan="2">Kenterrollentraining</td>
+  <td><a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2018/_Kanu_Kenterrollentraining.html">SS18</a>, <a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2018_Ferien/_Kanu_Kenterrollentraining.html">SF18</a><br/><a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2017/_Kanu_Kenterrollentraining.html">SS17</a>, <a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2017_Ferien/_Kanu_Kenterrollentraining.html">SF17</a></td>
+  <td>2*3h<br/>5*1.5h</td>
+  <td>Wannsee</td>
+  <td>30&euro;<br/>35&euro;</td>
+</tr>
+<tr>
+  <td rowspan="6">Kanupolo</td>
+  <td>Einsteiger</td>
+  <td rowspan="6"><a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2018/_Kanupolo.html">SS18</a>, <a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2018_Ferien/_Kanupolo.html">SF18</a><br/><a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2017/_Kanupolo.html">SS17</a>, <a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2017_Ferien/_Kanupolo.html">SF17</a></td>
+  <td>10*2h</td>
+  <td>Wannsee</td>
+  <td>45&euro;</td>
+</tr>
+<tr>
+  <td>Einsteiger (Ferien)</td>
+  <td>10*2h</td>
+  <td>Wannsee</td>
+  <td>35&euro;</td>
+</tr>
+<tr>
+  <td>Fortgeschrittene</td>
+  <td>12*2h</td>
+  <td>Wannsee</td>
+  <td>18&euro;</td>
+</tr>
+<tr>
+  <td>Techniktraining</td>
+  <td>12*2h</td>
+  <td>Wannsee</td>
+  <td>18&euro;</td>
+</tr>
+<tr>
+  <td>Fort. Taktiktraining</td>
+  <td>12*2h</td>
+  <td>Wannsee</td>
+  <td>20&euro;</td>
+</tr>
+<tr>
+  <td>Spiel &amp; Wettkampf</td>
+  <td>9*2h</td>
+  <td>Wannsee</td>
+  <td>30&euro;</td>
+</tr>
+<tr>
+  <td colspan="2">Kanu Wintertraining</td>
+  <td><a href="https://www.buchsys.de/fu-berlin/angebote/Wintersemester_2017_2018/_Kanu_Wintertraining.html">WS17</a>, <a href="https://www.buchsys.de/fu-berlin/angebote/Wintersemester_2017_2018_Ferien/_Kanu_Wintertraining.html">WF17</a></td>
+  <td>19*3h</td>
+  <td>Wannsee</td>
+  <td>22&euro;</td>
+</tr>
+<tr>
+  <td colspan="2">Kanuwandertour Feldberger Seen</td>
+  <td><a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2017/_Kanuwandertour_Feldberger_Seen.html">SS17</a>, <a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2017_Ferien/_Kanuwandertour_Feldberger_Seen.html">SF17</a></td>
+  <td>2d</td>
+  <td>Meck-Pomm</td>
+  <td>120&euro;</td>
+</tr>
+<tr>
+  <td rowspan="7">FU</td>
+  <td rowspan="7">Windsurfen</td>
+  <td colspan="2">Einweisung</td>
+  <td><a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2017/_Windsurfen_-_Einweisungstraining.html">SS17</a>, <a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2017_Ferien/_Windsurfen_-_Einweisungstraining.html">SF17</a></td>
+  <td>1*3h</td>
+  <td>Wannsee</td>
+  <td>34&euro;</td>
+</tr>
+<tr>
+  <td rowspan="4">Windsurfen</td>
+  <td>Einsteiger-Kurs</td>
+  <td rowspan="4"><a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2018/_Windsurfen.html">SS18</a>, <a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2018_Ferien/_Windsurfen.html">SF18</a><br/><a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2017/_Windsurfen.html">SS17</a>, <a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2017_Ferien/_Windsurfen.html">SF17</a><br/><a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2017/_Windsurfen_-_Fortgeschrittene.html">SS17</a>, <a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2017_Ferien/_Windsurfen_-_Fortgeschrittene.html">SF17</a></td>
+  <td>3*4h</td>
+  <td>Wannsee</td>
+  <td>110&euro;</td>
+</tr>
+<tr>
+  <td>Einweisungstraining</td>
+  <td>1*3h</td>
+  <td>Wannsee</td>
+  <td>34&euro;</td>
+</tr>
+<tr>
+  <td>Aufbaukurs</td>
+  <td>2*3h</td>
+  <td>Wannsee</td>
+  <td>51&euro;</td>
+</tr>
+<tr>
+  <td>Prüfung</td>
+  <td>1*?h</td>
+  <td>Wannsee</td>
+  <td>16&euro;</td>
+</tr>
+<tr>
+  <td rowspan="2">Windsurfen - Camps</td>
+  <td>Wochenend-Camp in Prerow</td>
+  <td rowspan="2"><a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2018/_Windsurfen_-_Camps.html">SS18</a>, <a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2018_Ferien/_Windsurfen_-_Camps.html">SF18</a><br/><a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2017/_Windsurfen_-_Camps.html">SS17</a>, <a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2017_Ferien/_Windsurfen_-_Camps.html">SF17</a></td>
+  <td>3d+A</td>
+  <td>Ostsee</td>
+  <td>99&euro;</td>
+</tr>
+<tr>
+  <td>5-Tage-Camp in Prerow</td>
+  <td>6d+A</td>
+  <td>Ostsee</td>
+  <td>169&euro;</td>
+</tr>
+<tr>
+  <td rowspan="1">FU</td>
+  <td rowspan="1">Rudern</td>
+  <td colspan="2"></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td rowspan="7">FU</td>
+  <td rowspan="7">Wassersport</td>
+  <td rowspan="2">Kitesurf - Camps</td>
+  <td>Wochenend-Camp</td>
+  <td rowspan="2"><a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2018/_Kitesurf_-_Camps.html">SS18</a>, <a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2018_Ferien/_Kitesurf_-_Camps.html">SF18</a><br/><a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2017/_Kitesurf_-_Camps.html">SS17</a>, <a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2017_Ferien/_Kitesurf_-_Camps.html">SF17</a></td>
+  <td>3d</td>
+  <td>Ostsee</td>
+  <td>200&euro;+A</td>
+</tr>
+<tr>
+  <td>5-Tage-Camp</td>
+  <td>6d</td>
+  <td>Ostsee</td>
+  <td>240&euro;+35&euro;+A</td>
+</tr>
+<tr>
+  <td colspan="2">Wellenreiten Frankreich</td>
+  <td><a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2018/_Wellenreiten_Frankreich.html">SS18</a>, <a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2018_Ferien/_Wellenreiten_Frankreich.html">SF18</a><br/><a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2017/_Wellenreiten_Frankreich.html">SS17</a>, <a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2017_Ferien/_Wellenreiten_Frankreich.html">SF17</a></td>
+  <td>9d<br/>7d</td>
+  <td>Biscaya</td>
+  <td>474&euro;<br/>460&euro;</td>
+</tr>
+<tr>
+  <td colspan="2">Stand-Up-Paddling</td>
+  <td><a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2018/_Stand_Up_Paddling__SUP_.html">SS18</a>, <a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2018_Ferien/_Stand_Up_Paddling__SUP_.html">SF18</a><br/><a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2017/_Stand_Up_Paddling__SUP_.html">SS17</a>, <a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2017_Ferien/_Stand_Up_Paddling__SUP_.html">SF17</a></td>
+  <td>1*3h</td>
+  <td>Wannsee</td>
+  <td>15&euro;</td>
+</tr>
+<tr>
+  <td colspan="2">Stand-Up-Paddling - 7-Seen-Tour</td>
+  <td><a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2018/_Stand_Up_Paddling__SUP__-_7_Seen_Tour.html">SS18</a>, <a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2018_Ferien/_Stand_Up_Paddling__SUP__-_7_Seen_Tour.html">SF18</a></td>
+  <td>1*6h</td>
+  <td>Berlin</td>
+  <td>15&euro;</td>
+</tr>
+<tr>
+  <td colspan="2">Saisonauftakt im WSZ</td>
+  <td><a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2017/_Saisonauftakt_im_WSZ.html">SS17</a>, <a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2017_Ferien/_Saisonauftakt_im_WSZ.html">SF17</a></td>
+  <td></td>
+  <td>Wannsee</td>
+  <td></td>
+</tr>
+<tr>
+  <td colspan="2">Wassersport - Schnupperangebote</td>
+  <td><a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2018/_Segeln_-_12__Berliner_Hochschulcup_2018.html">SS18</a>, <a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2018_Ferien/_Segeln_-_12__Berliner_Hochschulcup_2018.html">SF18</a><br/><a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2017/_Wassersport_-_Schnupperangebote.html">SS17</a>, <a href="https://www.buchsys.de/fu-berlin/angebote/Sommersemester_2017_Ferien/_Wassersport_-_Schnupperangebote.html">SF17</a></td>
+  <td></td>
+  <td>Wannsee</td>
+  <td></td>
+</tr>
+<tr>
+  <td colspan="9" class="heading">HU Wassersport (mit Gerät, einschl. Sportreisen)</td>
+</tr>
+<tr>
+  <td rowspan="15">HU</td>
+  <td rowspan="15">Segeln</td>
+  <td colspan="2">Freies Segeln</td>
+  <td><a href="https://zeh2.zeh.hu-berlin.de/angebote/aktueller_zeitraum/_Segeln___Freies_Segeln.html">Link</a></td>
+  <td></td>
+  <td>Schmöckwitz</td>
+  <td></td>
+  <td class="voraussetzungen">SBF Binnen</td>
+</tr>
+<tr>
+  <td colspan="2">Grundkurs</td>
+  <td><a href="https://zeh2.zeh.hu-berlin.de/angebote/aktueller_zeitraum/_Segeln_Grundkurs.html">Link</a></td>
+  <td>3*7h</td>
+  <td>Schmöckwitz</td>
+  <td>75&euro;</td>
+  <td class="voraussetzungen">-</td>
+</tr>
+<tr>
+  <td colspan="2">Sportbootführerschein Binnen Segeln/Motor</td>
+  <td><a href="https://zeh2.zeh.hu-berlin.de/angebote/aktueller_zeitraum/_Sportbootfuehrerschein_Binnen_Segeln_Motor.html">Link</a></td>
+  <td>5*8h</td>
+  <td>Schmöckwitz</td>
+  <td>150&euro;</td>
+  <td class="voraussetzungen">Grundkurs</td>
+</tr>
+<tr>
+  <td colspan="2">Segeln Prüfungsauffrischungskurs SBF-Binnen</td>
+  <td><a href="https://zeh2.zeh.hu-berlin.de/angebote/aktueller_zeitraum/_Segeln_Pruefungsauffrischungskurs_SBF-Binnen.html">Link</a></td>
+  <td>2*8h</td>
+  <td>Schmöckwitz</td>
+  <td>50&euro;</td>
+  <td class="voraussetzungen">Grundkurs + SBF-Binnen-Kurs</td>
+</tr>
+<tr>
+  <td colspan="2">SBF Binnen Prüfungsanmeldung Theorie und Praxis</td>
+  <td><a href="https://zeh2.zeh.hu-berlin.de/angebote/aktueller_zeitraum/_SBF_Binnen_Pruefungsanmeldung_Theorie__und__Praxis.html">Link</a></td>
+  <td>1*5.5h</td>
+  <td>Schmöckwitz</td>
+  <td>0&euro;</td>
+  <td class="voraussetzungen">Grundkurs + SBF-Binnen-Kurs</td>
+</tr>
+<tr>
+  <td colspan="2">Wiedereinsteigerkurs</td>
+  <td><a href="https://zeh2.zeh.hu-berlin.de/angebote/aktueller_zeitraum/_Segeln_Wiedereinsteigerkurs.html">Link</a></td>
+  <td>2*8h</td>
+  <td>Schmöckwitz</td>
+  <td>50&euro;</td>
+  <td class="voraussetzungen">SBF Binnen</td>
+</tr>
+<tr>
+  <td colspan="2">Fortgeschrittene Gennaker und Trapez</td>
+  <td><a href="https://zeh2.zeh.hu-berlin.de/angebote/aktueller_zeitraum/_Segeln_Fortgeschrittene_Gennaker__und__Trapez.html">Link</a></td>
+  <td>3*8h</td>
+  <td>Schmöckwitz</td>
+  <td>90&euro;</td>
+  <td class="voraussetzungen">SBF Binnen + sicheres Jollensegeln</td>
+</tr>
+<tr>
+  <td colspan="2">Segeln Regattatraining</td>
+  <td><a href="https://zeh2.zeh.hu-berlin.de/angebote/aktueller_zeitraum/_Segeln_Regattatraining.html">Link</a></td>
+  <td>2*8h</td>
+  <td>Schmöckwitz</td>
+  <td>50&euro;</td>
+  <td class="voraussetzungen">SBF Binnen</td>
+</tr>
+<tr>
+  <td colspan="2">Segeln Freitagsregatta</td>
+  <td><a href="https://zeh2.zeh.hu-berlin.de/angebote/aktueller_zeitraum/_Segeln_Freitagsregatta.html">Link</a></td>
+  <td>1*2.5h</td>
+  <td>Schmöckwitz</td>
+  <td>7&euro;</td>
+  <td class="voraussetzungen">SBF Binnen</td>
+</tr>
+<tr>
+  <td colspan="2">Sportbootführerschein See</td>
+  <td><a href="https://zeh2.zeh.hu-berlin.de/angebote/aktueller_zeitraum/_Sportbootfuehrerschein_See.html">Link</a></td>
+  <td>20h</td>
+  <td>HU</td>
+  <td>140&euro;</td>
+  <td class="voraussetzungen">Motorboot-Erfahrung</td>
+</tr>
+<tr>
+  <td colspan="2">Sportbootführerschein See Praxis</td>
+  <td><a href="https://zeh2.zeh.hu-berlin.de/angebote/aktueller_zeitraum/_Sportbootfuehrerschein_See_Praxis.html">Link</a></td>
+  <td>2*0.5h</td>
+  <td>Schmöckwitz</td>
+  <td>0&euro;</td>
+  <td class="voraussetzungen">SBF See Theorie Kurs</td>
+</tr>
+<tr>
+  <td colspan="2">Sportführerschein See Prüfungsanmeldung</td>
+  <td><a href="https://zeh2.zeh.hu-berlin.de/angebote/aktueller_zeitraum/_Sportfuehrerschein_See_Pruefungsanmeldung.html">Link</a></td>
+  <td>1*5.5h</td>
+  <td>Schmöckwitz</td>
+  <td>0&euro;</td>
+  <td class="voraussetzungen">SBF See Theorie + Praxis Kurs</td>
+</tr>
+<tr>
+  <td colspan="2">Abslippen</td>
+  <td><a href="https://zeh2.zeh.hu-berlin.de/angebote/aktueller_zeitraum/_Segeln___Abslippen.html">Link</a></td>
+  <td></td>
+  <td>Schmöckwitz</td>
+  <td>0&euro;</td>
+  <td class="voraussetzungen">-</td>
+</tr>
+<tr>
+  <td rowspan="2">Exkursion Fehmarn</td>
+  <td>Tour</td>
+  <td rowspan="2"><a href="https://zeh2.zeh.hu-berlin.de/angebote/aktueller_zeitraum/_Exkursion_Fehmarn.html">Link</a></td>
+  <td>6d</td>
+  <td>Ostsee</td>
+  <td>225&euro;+A</td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td>Tour WE</td>
+  <td>3d</td>
+  <td>Ostsee</td>
+  <td>141&euro;+A</td>
+</tr>
+<tr>
+  <td rowspan="3">HU</td>
+  <td rowspan="3">Törn</td>
+  <td colspan="2">[2018] Ostseeflotillentörn 2018</td>
+  <td><a href="https://zeh2.zeh.hu-berlin.de/angebote/Sommersemester_2018/_Exkursion_Ostseeflotillentoern_2018.html">SS18</a></td>
+  <td>9d</td>
+  <td>Ostsee</td>
+  <td>450&euro;+A</td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td colspan="2">[2018] SKS Ausbildungstörn</td>
+  <td><a href="https://zeh2.zeh.hu-berlin.de/angebote/Sommersemester_2018/_Exkursion_SKS_Ausbildungstoern.html">SS18</a></td>
+  <td>15d</td>
+  <td>Ostsee</td>
+  <td>1095&euro;+A</td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td colspan="2">[2017] Ostseeflotillentörn 2017</td>
+  <td><a href="https://zeh2.zeh.hu-berlin.de/angebote/Sommersemester_2017/_Exkursion_Ostseeflotillentoern_2017.html">SS17</a></td>
+  <td>9d</td>
+  <td>Ostsee</td>
+  <td>450&euro;+A</td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td rowspan="14">HU</td>
+  <td rowspan="14">Paddeln</td>
+  <td colspan="2">Exkursion Wildwasserkajak Wildalpen</td>
+  <td><a href="https://zeh2.zeh.hu-berlin.de/angebote/aktueller_zeitraum/_Exkursion_Wildwasserkajak_Wildalpen__A.html">Link</a></td>
+  <td>7d</td>
+  <td>Alpen</td>
+  <td>340&euro;+A</td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td rowspan="13">Kanu-<br/>wasser-<br/>wandern</td>
+  <td>Freies Paddeln</td>
+  <td><a href="https://zeh2.zeh.hu-berlin.de/angebote/aktueller_zeitraum/_Kanu-Wasserwandern___Freies_Paddeln.html">Link</a></td>
+  <td></td>
+  <td>Schmöckwitz</td>
+  <td></td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td>Basiskurs</td>
+  <td><a href="https://zeh2.zeh.hu-berlin.de/angebote/aktueller_zeitraum/_Kanu-Wasserwandern_Basiskurs.html">Link</a></td>
+  <td>7*3h</td>
+  <td>Schmöckwitz</td>
+  <td>35&euro;</td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td>Herbstkurs</td>
+  <td><a href="https://zeh2.zeh.hu-berlin.de/angebote/aktueller_zeitraum/_Kanu-Wasserwandern_Herbstkurs.html">Link</a></td>
+  <td>4*3h</td>
+  <td>Schmöckwitz</td>
+  <td>20&euro;</td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td>Winterferienkurs</td>
+  <td><a href="https://zeh2.zeh.hu-berlin.de/angebote/aktueller_zeitraum/_Kanu-Wasserwandern_Winterferienkurs.html">Link</a></td>
+  <td>?*?h</td>
+  <td>Schmöckwitz</td>
+  <td>?&euro;</td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td>Frühjahrskurs</td>
+  <td><a href="https://zeh2.zeh.hu-berlin.de/angebote/aktueller_zeitraum/_Kanu-Wasserwandern_Fruehjahrskurs.html">Link</a></td>
+  <td>3*3h</td>
+  <td>Schmöckwitz</td>
+  <td>15&euro;</td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td>Tagestouren</td>
+  <td><a href="https://zeh2.zeh.hu-berlin.de/angebote/aktueller_zeitraum/_Kanu-Wasserwandern_Tagestouren.html">Link</a></td>
+  <td>1*7h</td>
+  <td>Schmöckwitz</td>
+  <td>15&euro;</td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td>Tagestouren mit Armin</td>
+  <td><a href="https://zeh2.zeh.hu-berlin.de/angebote/aktueller_zeitraum/_Kanu-Wasserwandern_Tagestouren_mit_Armin.html">Link</a></td>
+  <td>1*8h</td>
+  <td>Schmöckwitz</td>
+  <td>15&euro;</td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td>Feierabendtour</td>
+  <td><a href="https://zeh2.zeh.hu-berlin.de/angebote/aktueller_zeitraum/_Kanu-Wasserwandern_Feierabendtour.html">Link</a></td>
+  <td>1*5h</td>
+  <td>Schmöckwitz</td>
+  <td>15&euro;</td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td>Mondscheinpaddeln</td>
+  <td><a href="https://zeh2.zeh.hu-berlin.de/angebote/aktueller_zeitraum/_Kanu-Wasserwandern_Mondscheinpaddeln.html">Link</a></td>
+  <td>1*5h</td>
+  <td>Schmöckwitz</td>
+  <td>20&euro;</td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td>Halbmarathon</td>
+  <td><a href="https://zeh2.zeh.hu-berlin.de/angebote/aktueller_zeitraum/_Kanu-Wasserwandern_Halbmarathon.html">Link</a></td>
+  <td>1*8h</td>
+  <td>Schmöckwitz</td>
+  <td>5&euro;</td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td>Wochenendtouren</td>
+  <td><a href="https://zeh2.zeh.hu-berlin.de/angebote/aktueller_zeitraum/_Kanu-Wasserwandern_Wochenendtouren.html">Link</a></td>
+  <td>3d</td>
+  <td>Berlin</td>
+  <td>55&euro;</td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td>Sommertour Storkow</td>
+  <td><a href="https://zeh2.zeh.hu-berlin.de/angebote/aktueller_zeitraum/_Kanu-Wasserwandern_Sommertour_Storkow.html">Link</a></td>
+  <td>4d</td>
+  <td>Berlin</td>
+  <td>95&euro;</td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td>Kanu- und Fahrrad-Tour</td>
+  <td><a href="https://zeh2.zeh.hu-berlin.de/angebote/aktueller_zeitraum/_Kanu-Wasserwandern_und_Fahrradtour.html">Link</a></td>
+  <td>3d</td>
+  <td>Berlin</td>
+  <td>45&euro;</td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td rowspan="5">HU</td>
+  <td rowspan="5">Windsurfen</td>
+  <td colspan="2">Freies Surfen</td>
+  <td><a href="https://zeh2.zeh.hu-berlin.de/angebote/aktueller_zeitraum/_Windsurfen___Freies_Surfen.html">Link</a></td>
+  <td></td>
+  <td>Schmöckwitz</td>
+  <td></td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td colspan="2">Anfänger</td>
+  <td><a href="https://zeh2.zeh.hu-berlin.de/angebote/aktueller_zeitraum/_Windsurfen.html">Link</a></td>
+  <td>3*7h</td>
+  <td>Schmöckwitz</td>
+  <td>75&euro;</td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td colspan="2">Fortgeschrittene</td>
+  <td><a href="https://zeh2.zeh.hu-berlin.de/angebote/aktueller_zeitraum/_Windsurfen_Fortgeschrittene.html">Link</a></td>
+  <td>2*7h</td>
+  <td>Schmöckwitz</td>
+  <td>60&euro;</td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td rowspan="2">Exkursion Fehmarn</td>
+  <td>Tour</td>
+  <td rowspan="2"><a href="https://zeh2.zeh.hu-berlin.de/angebote/aktueller_zeitraum/_Exkursion_Fehmarn.html">Link</a></td>
+  <td>6d</td>
+  <td>Ostsee</td>
+  <td>175&euro;+A</td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td>Tour WE</td>
+  <td>3d</td>
+  <td>Ostsee</td>
+  <td>121&euro;+A</td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td rowspan="1">HU</td>
+  <td rowspan="1">Rudern</td>
+  <td colspan="2"></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td rowspan="6">HU</td>
+  <td rowspan="6">Wassersport</td>
+  <td rowspan="2">Exkursion Kitesurfen<br/>Thiessow/Rügen</td>
+  <td>3-Tage-Kurs</td>
+  <td rowspan="2"><a href="https://zeh2.zeh.hu-berlin.de/angebote/aktueller_zeitraum/_Exkursion_Kitesurfen_Thiessow__Ruegen.html">Link</a></td>
+  <td>4d</td>
+  <td>Ostsee</td>
+  <td>180&euro;+A</td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td>5-Tage-Kurs</td>
+  <td>7d</td>
+  <td>Ostsee</td>
+  <td>349&euro;+A</td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td colspan="2">Exkursion Wellenreiten Sylt</td>
+  <td><a href="https://zeh2.zeh.hu-berlin.de/angebote/aktueller_zeitraum/_Exkursion_Wellenreiten_Sylt.html">Link</a></td>
+  <td>5d</td>
+  <td>Nordsee</td>
+  <td>170&euro;+A</td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td colspan="2">Stand up Paddling - Freies Paddeln</td>
+  <td><a href="https://zeh2.zeh.hu-berlin.de/angebote/aktueller_zeitraum/_Stand_up_Paddling___Freies_Paddeln.html">Link</a></td>
+  <td></td>
+  <td>Schmöckwitz</td>
+  <td></td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td colspan="2">Stand up Paddling - Einführungskurs</td>
+  <td><a href="https://zeh2.zeh.hu-berlin.de/angebote/aktueller_zeitraum/_Stand_up_Paddling_Einfuehrungskurs.html">Link</a></td>
+  <td>1*2.5h</td>
+  <td>Schmöckwitz</td>
+  <td>11&euro;</td>
+  <td class="voraussetzungen"></td>
+</tr>
+<tr>
+  <td colspan="2">Stand up Paddling - Tour zweitägig</td>
+  <td><a href="https://zeh2.zeh.hu-berlin.de/angebote/aktueller_zeitraum/_Stand_up_Paddling_Tour_2taegig.html">Link</a></td>
+  <td>2d</td>
+  <td>Norddeu.</td>
+  <td>89&euro;+A</td>
+  <td class="voraussetzungen"></td>
+</tr>
+</tbody>
+</table>
+
+</body>
+</html>
